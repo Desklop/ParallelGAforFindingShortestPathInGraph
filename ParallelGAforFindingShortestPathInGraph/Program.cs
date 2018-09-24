@@ -26,7 +26,7 @@ namespace ParallelGAforFindingShortestPathInGraph
 
         static void Main(string[] args)
         {
-            StreamWriter writer = new StreamWriter("D://Для учёбы/4 семестр/Лабы по МРЗвИС/Лаба 7/исходная популяция.txt");
+            StreamWriter writer = new StreamWriter("Initial population.txt");
             countComp = 10;
             Console.WriteLine("Кол-во компьютеров: " + countComp);
             writer.WriteLine("Кол-во компьютеров: " + countComp);
@@ -254,7 +254,7 @@ namespace ParallelGAforFindingShortestPathInGraph
                 allFitnesses[i, 1] = data.allFitnesses[i, 1];
             }
 
-            string fileName = "D://Для учёбы/4 семестр/Лабы по МРЗвИС/Лаба 7/подпопуляция " + (data.numberThread + 1) + ".txt";
+            string fileName = "Subpopulation " + (data.numberThread + 1) + ".txt";
             using (StreamWriter writer = new StreamWriter(fileName)) { }  //очистка файла перед записью
 
             Random rand = new Random();
